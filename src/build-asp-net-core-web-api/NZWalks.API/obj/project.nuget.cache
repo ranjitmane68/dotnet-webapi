@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "fl2j7ftNshs=",
+  "success": true,
+  "projectFilePath": "/Users/ranjitmane/home/learning/dotnet-webapi/src/build-asp-net-core-web-api/NZWalks.API/NZWalks.API.csproj",
+  "expectedPackageFiles": [
+    "/Users/ranjitmane/.nuget/packages/microsoft.aspnetcore.openapi/9.0.10/microsoft.aspnetcore.openapi.9.0.10.nupkg.sha512",
+    "/Users/ranjitmane/.nuget/packages/microsoft.entityframeworkcore.tools/10.0.1/microsoft.entityframeworkcore.tools.10.0.1.nupkg.sha512",
+    "/Users/ranjitmane/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
