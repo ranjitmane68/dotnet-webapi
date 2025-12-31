@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using NZWalks.API.Data;
 using NZWalks.API.Models.Domain;
 using NZWalks.API.Models.DTO;
@@ -20,25 +19,12 @@ namespace NZWalks.API.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var guid = Guid.NewGuid();
-            //get regions from database
-            var regions = new List<Region>()
-            {
-                new()
-                {
-                    Id = Guid.NewGuid(),
-                    Name = "North Island"
-                },
-                new()
-                {
-                    Id =  Guid.NewGuid(),
-                    Name = "South Island"
-                },            };
+            var regionDomainModels = _nzWalksDbContext.Regions.ToList();
 
             //map domain models to DTO
             var regionsDto = new List<RegionDto>();
 
-            foreach (var region in regions)
+            foreach (var region in regionDomainModels)
             {
                 regionsDto.Add(
                     new RegionDto()
@@ -77,5 +63,34 @@ namespace NZWalks.API.Controllers
             return Ok(regionDto);
 
         }
+
+        [HttpPost]
+        public IActionResult Create([FromBody] RegionDto addRegionDto)
+        {
+            //map or convert DTO to domain model
+            var regionDomainModel = new Region
+            {
+                Id = addRegionDto.Id,
+                Name = addRegionDto.Name,
+                Code = addRegionDto.Code,
+                RegionImageUrl = addRegionDto.RegionImageUrl
+            };
+
+            //use domain model to create region
+            _nzWalksDbContext.Regions.Add(regionDomainModel);
+            _nzWalksDbContext.SaveChanges();
+
+            //map domain model to DTO
+            var regionDto = new RegionDto()
+            {
+                Id = regionDomainModel.Id,
+                Name = regionDomainModel.Name,
+                Code = regionDomainModel.Code,
+                RegionImageUrl = regionDomainModel.RegionImageUrl
+            };
+            return CreatedAtAction(nameof(GetById), new { id = regionDto.Id }, regionDto);
+
+        }
     }
 }
+
