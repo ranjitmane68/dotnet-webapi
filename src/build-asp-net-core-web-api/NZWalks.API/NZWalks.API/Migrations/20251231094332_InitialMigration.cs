@@ -24,7 +24,7 @@ namespace NZWalks.API.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Locations",
+                name: "Regions",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -34,7 +34,7 @@ namespace NZWalks.API.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Locations", x => x.Id);
+                    table.PrimaryKey("PK_Regions", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -58,9 +58,9 @@ namespace NZWalks.API.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Walks_Locations_RegionId",
+                        name: "FK_Walks_Regions_RegionId",
                         column: x => x.RegionId,
-                        principalTable: "Locations",
+                        principalTable: "Regions",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -86,7 +86,7 @@ namespace NZWalks.API.Migrations
                 name: "Difficulties");
 
             migrationBuilder.DropTable(
-                name: "Locations");
+                name: "Regions");
         }
     }
 }

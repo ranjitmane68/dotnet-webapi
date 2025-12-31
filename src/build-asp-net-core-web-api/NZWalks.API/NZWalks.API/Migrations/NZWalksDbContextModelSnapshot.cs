@@ -56,7 +56,7 @@ namespace NZWalks.API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Locations");
+                    b.ToTable("Regions");
                 });
 
             modelBuilder.Entity("NZWalks.API.Models.Domain.Walk", b =>

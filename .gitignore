@@ -1,0 +1,9 @@
+src/build-asp-net-core-web-api/NZWalks.API/NZWalks.API/bin/Debug/net10.0/NZWalks.API.pdb
+*.dll
+*.pdb
+*.dll
+src/build-asp-net-core-web-api/NZWalks.API/NZWalks.API/obj/Debug/net10.0/rjsmrazor.dswa.cache.json
+/src/build-asp-net-core-web-api/NZWalks.API/NZWalks.API/obj/Debug/net10.0
+src/build-asp-net-core-web-api/NZWalks.API/NZWalks.API/obj/Debug/net10.0/NZWalks.API.sourcelink.json
+src/build-asp-net-core-web-api/NZWalks.API/NZWalks.API/obj/Debug/net10.0/NZWalks.API.pdb
+*.dll

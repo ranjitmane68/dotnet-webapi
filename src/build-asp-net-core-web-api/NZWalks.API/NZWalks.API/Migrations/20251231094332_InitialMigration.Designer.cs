@@ -12,7 +12,7 @@ using NZWalks.API.Data;
 namespace NZWalks.API.Migrations
 {
     [DbContext(typeof(NZWalksDbContext))]
-    [Migration("20251230180630_InitialMigration")]
+    [Migration("20251231094332_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -59,7 +59,7 @@ namespace NZWalks.API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Locations");
+                    b.ToTable("Regions");
                 });
 
             modelBuilder.Entity("NZWalks.API.Models.Domain.Walk", b =>

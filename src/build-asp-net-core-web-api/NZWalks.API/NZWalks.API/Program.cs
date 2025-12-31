@@ -43,7 +43,6 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 // Middleware for security/authentication
-app.UseHttpsRedirection(); // (duplicate call, safe but redundant)
 app.UseAuthentication();   // Enables authentication middleware (validates user identity)
 app.UseAuthorization();    // Enables authorization middleware (checks user permissions)
 
