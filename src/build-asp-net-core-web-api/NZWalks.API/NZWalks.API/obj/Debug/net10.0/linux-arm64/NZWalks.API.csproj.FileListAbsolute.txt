@@ -1,9 +1,0 @@
-/Users/ranjitmane/home/learning/dotnet-webapi/src/build-asp-net-core-web-api/NZWalks.API/NZWalks.API/obj/Debug/net10.0/linux-arm64/NZWalks.API.csproj.AssemblyReference.cache
-/Users/ranjitmane/home/learning/dotnet-webapi/src/build-asp-net-core-web-api/NZWalks.API/NZWalks.API/obj/Debug/net10.0/linux-arm64/rpswa.dswa.cache.json
-/Users/ranjitmane/home/learning/dotnet-webapi/src/build-asp-net-core-web-api/NZWalks.API/NZWalks.API/obj/Debug/net10.0/linux-arm64/NZWalks.API.GeneratedMSBuildEditorConfig.editorconfig
-/Users/ranjitmane/home/learning/dotnet-webapi/src/build-asp-net-core-web-api/NZWalks.API/NZWalks.API/obj/Debug/net10.0/linux-arm64/NZWalks.API.AssemblyInfoInputs.cache
-/Users/ranjitmane/home/learning/dotnet-webapi/src/build-asp-net-core-web-api/NZWalks.API/NZWalks.API/obj/Debug/net10.0/linux-arm64/NZWalks.API.AssemblyInfo.cs
-/Users/ranjitmane/home/learning/dotnet-webapi/src/build-asp-net-core-web-api/NZWalks.API/NZWalks.API/obj/Debug/net10.0/linux-arm64/NZWalks.API.csproj.CoreCompileInputs.cache
-/Users/ranjitmane/home/learning/dotnet-webapi/src/build-asp-net-core-web-api/NZWalks.API/NZWalks.API/obj/Debug/net10.0/linux-arm64/NZWalks.API.MvcApplicationPartsAssemblyInfo.cs
-/Users/ranjitmane/home/learning/dotnet-webapi/src/build-asp-net-core-web-api/NZWalks.API/NZWalks.API/obj/Debug/net10.0/linux-arm64/NZWalks.API.MvcApplicationPartsAssemblyInfo.cache
-/Users/ranjitmane/home/learning/dotnet-webapi/src/build-asp-net-core-web-api/NZWalks.API/NZWalks.API/obj/Debug/net10.0/linux-arm64/NZWalks.API.sourcelink.json
