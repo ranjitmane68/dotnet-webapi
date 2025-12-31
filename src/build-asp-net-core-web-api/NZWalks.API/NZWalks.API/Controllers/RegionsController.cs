@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NZWalks.API.Data;
 using NZWalks.API.Models.Domain;
+using NZWalks.API.Models.DTO;
 
 namespace NZWalks.API.Controllers
 {
@@ -32,34 +33,25 @@ namespace NZWalks.API.Controllers
                 {
                     Id =  Guid.NewGuid(),
                     Name = "South Island"
-                },
-                new()
-                {
-                    Id = Guid.NewGuid(),
-                    Name = "Canterbury"
-                },
-                new()
-                {
-                    Id = Guid.NewGuid(),
-                    Name = "Tasman"
-                },
-                new()
-                {
-                    Id = Guid.NewGuid(),
-                    Name = "Marlborough"
-                },
-                new()
-                {
-                    Id = Guid.NewGuid(),
-                    Name = "Auckland"
-                },
-                new()
-                {
-                    Id = Guid.NewGuid(),
-                    Name = "Waikato"
-                },
-            };
-            return Ok(regions);
+                },            };
+
+            //map domain models to DTO
+            var regionsDto = new List<RegionDto>();
+
+            foreach (var region in regions)
+            {
+                regionsDto.Add(
+                    new RegionDto()
+                    {
+                        Id = region.Id,
+                        Name = region.Name,
+                        Code = region.Code,
+                        RegionImageUrl = region.RegionImageUrl
+                    }
+                );
+            }
+
+            return Ok(regionsDto);
         }
 
         [HttpGet]
@@ -67,15 +59,22 @@ namespace NZWalks.API.Controllers
         public IActionResult GetById([FromRoute] Guid id)
         {
             //get regions from database by guid
-            var region = _nzWalksDbContext.Regions.Find(id);
+            var regionDomain = _nzWalksDbContext.Regions.FirstOrDefault(x => x.Id == id);
 
-            if (region == null)
+            if (regionDomain == null)
             {
                 return NotFound();
             }
 
+            var regionDto = new RegionDto()
+            {
+                Id = regionDomain.Id,
+                Name = regionDomain.Name,
+                Code = regionDomain.Code,
+                RegionImageUrl = regionDomain.RegionImageUrl
+            };
 
-            return Ok(region);
+            return Ok(regionDto);
 
         }
     }

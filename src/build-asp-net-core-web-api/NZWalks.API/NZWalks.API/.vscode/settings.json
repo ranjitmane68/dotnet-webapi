@@ -1,1 +1,10 @@
-{}
+{
+  "[csharp]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp"
+  },
+  "editor.formatOnSaveMode": "file",
+  "editor.formatOnType": true,
+  "files.autoSave": "off",
+  "editor.defaultFormatter": "ms-dotnettools.csdevkit",
+  "editor.wordWrap": "on"
+}
